@@ -24,7 +24,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
-@DisplayName("View 컨트롤러 - 게시글 관리")
+@DisplayName("컨트롤러 - 게시글 관리")
 @Import(SecurityConfig.class)
 @WebMvcTest(ArticleManagementController.class)
 class ArticleManagementControllerTest {
@@ -71,7 +71,7 @@ class ArticleManagementControllerTest {
         then(articleManagementService).should().getArticle(articleId);
     }
 
-    @DisplayName("[view][GET] 게시글 삭제 - 정상 호출")
+    @DisplayName("[view][POST] 게시글 삭제 - 정상 호출")
     @Test
     void givenArticleId_whenRequestingDeletion_thenRedirectsToArticleManagementView() throws Exception {
         // Given
